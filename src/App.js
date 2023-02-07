@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import './App.css';
+import Header from "./components/Header";
 
 function App() {
   const [input, setInput] = useState("");
@@ -93,7 +94,9 @@ function App() {
   };
   return (
     <div className="terminal-container">
+      <div className="box">
       <h1>TERMINAL BASED PORTFOLIO WEBSITE</h1>
+      <Header />
       <h3>Type "help" to know more.</h3>
       <form onSubmit={handleSubmit}>
         <div className="terminal-input-container">
@@ -109,6 +112,7 @@ function App() {
         </div>
         <pre className="terminal-output">{output}</pre>
       </form>
+      </div>
     </div>
   );
 }
